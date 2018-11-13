@@ -21,7 +21,7 @@ namespace LitecartTests
             chromeOptions.AddArgument("disable-infobars");
             driver = new ChromeDriver(chromeOptions);
 
-            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(7));
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(4));
             wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
 
             driver.Url = "http://localhost/litecart";
