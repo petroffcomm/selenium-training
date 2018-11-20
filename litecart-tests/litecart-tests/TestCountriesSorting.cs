@@ -6,7 +6,7 @@ using OpenQA.Selenium;
 namespace LitecartTests
 {
     [TestFixture]
-    public class TestCountriesSorting : TestBase
+    public class TestCountriesSorting : AdminAuthTestBase
     {
         [Test]
         public void TestSortingForCountries()
