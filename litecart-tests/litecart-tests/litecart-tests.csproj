@@ -17,4 +17,9 @@
     <PackageReference Include="NFluent" Version="2.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Folder Include="AdminTests\" />
+    <Folder Include="UserTests\" />
+  </ItemGroup>
 </Project>

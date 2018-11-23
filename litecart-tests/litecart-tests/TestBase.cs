@@ -66,7 +66,7 @@ namespace LitecartTests
 
             if (type == GENERAL)
             {
-                allowedChars = " _.-abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ0123456789";
+                allowedChars = "_.-abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ0123456789";
                 strToReturn = genCharSeq(lenght, allowedChars);
             }
 
