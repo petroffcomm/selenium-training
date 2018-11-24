@@ -21,5 +21,6 @@
     <Folder Include="images\" />
     <Folder Include="AdminTests\" />
     <Folder Include="UserTests\" />
+    <Folder Include="CartTests\" />
   </ItemGroup>
 </Project>
