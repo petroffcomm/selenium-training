@@ -70,6 +70,7 @@ namespace LitecartTests
             if (!driver.Url.Equals(cartLink)) driver.Url = cartLink;
 
             if (driver.FindElements(By.CssSelector("ul.shortcuts")).Count == 1)
+            // Cart contains a lot of items 
             {
                 // Choose first element available
                 driver.FindElement(By.CssSelector("li.shortcut")).Click();
@@ -77,6 +78,7 @@ namespace LitecartTests
                 ClearCart();
             }
             else
+            // Cart contains a single item
             {
                 RemoveItemFromCart();
                 ClickByLinkText("Back");
