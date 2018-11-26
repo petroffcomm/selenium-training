@@ -17,6 +17,7 @@ namespace LitecartTests
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.AddArgument("start-fullscreen");
             chromeOptions.AddArgument("disable-infobars");
+            chromeOptions.SetLoggingPreference(LogType.Browser, LogLevel.All);
             driver = new ChromeDriver(chromeOptions);
 
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
