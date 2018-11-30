@@ -4,14 +4,12 @@ using System.IO;
 using System.Linq;
 using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Remote;
-using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 
 namespace LitecartTests
 {
     [TestFixture]
-    public class TeastBrowserLogForProductItems : AdminAuthTestBase
+    public class TestBrowserLogForProductItems : AdminAuthTestBase
     {
         [Test]
         public void TeastBrowserLogs()

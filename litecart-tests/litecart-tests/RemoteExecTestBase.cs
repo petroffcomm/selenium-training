@@ -26,7 +26,7 @@ namespace LitecartTests
         {
             driver = new FirefoxDriver();
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(4);
-            driver.Url = "http://192.168.0.15/litecart";
+            driver.Url = "http://localhost/litecart";
 
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
             wait.IgnoreExceptionTypes(typeof(NoSuchElementException));

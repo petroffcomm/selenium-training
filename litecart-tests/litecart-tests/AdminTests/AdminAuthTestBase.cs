@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 
 namespace LitecartTests
@@ -15,7 +16,7 @@ namespace LitecartTests
         public void SetUp()
         {
             ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.AddArgument("start-fullscreen");
+            //chromeOptions.AddArgument("start-fullscreen");
             chromeOptions.AddArgument("disable-infobars");
             chromeOptions.SetLoggingPreference(LogType.Browser, LogLevel.All);
             driver = new ChromeDriver(chromeOptions);
@@ -29,8 +30,8 @@ namespace LitecartTests
             driver.FindElement(By.Name("password")).SendKeys("admin");
             driver.FindElement(By.Name("login")).Click();
 
-            By elementToWaitFor = By.XPath("//a[contains(@href, 'logout.php') and @title='Logout']");
-            wait.Until(driver => driver.FindElement(elementToWaitFor));
+            By logoutLink = By.XPath("//a[contains(@href, 'logout.php') and @title='Logout']");
+            wait.Until(driver => driver.FindElement(logoutLink));
         }
 
         [TearDown]
